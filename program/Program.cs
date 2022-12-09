@@ -1,7 +1,7 @@
 ﻿Console.Write("Задайте длину массива: ");
 int lengthArray = Convert.ToInt32(Console.ReadLine());
-
-string [] CreateArray()
+int x = 3; // условие задачи
+string [] FillArray()
 {
     string[] array = new string [lengthArray];
     for(int i = 0; i < lengthArray; i++)
@@ -19,7 +19,7 @@ string[] SortArray(string[] array)
 
     for(int i = 0; i < array.Length; i++)
     {
-        if(array[i].Length <= 3) 
+        if(array[i].Length <= x) 
         {
             newArray[count] = array[i];
             count++;
@@ -40,7 +40,7 @@ void PrintArray(string[] array)
 }
 
 string[] array = new string [lengthArray];
-array = CreateArray();
+array = FillArray();
 SortArray(array);
 string[] productArray = new string [array.Length];
 productArray = SortArray(array);
